@@ -7,7 +7,7 @@ public class Tracinhos implements Cloneable {
         }
         this.texto = new char[qtd];
         for (int i = 0; i < qtd; i++) {
-            this.texto[i] = '_'; // Preenche com underlines
+            this.texto[i] = '_'; //preenche com underlines
         }
     }
 
@@ -15,27 +15,27 @@ public class Tracinhos implements Cloneable {
         if (posicao < 0 || posicao >= this.texto.length) {
             throw new Exception("Posição inválida!");
         }
-        // Armazena a letra na posição fornecida apenas se for um underline.
+        //armazena a letra na posição fornecida apenas se for um underline.
         if (this.texto[posicao] == '_') {
-            this.texto[posicao] = letra; // Armazena a letra na posição fornecida
+            this.texto[posicao] = letra; //armazena a letra na posição fornecida
         }
     }    
 
     public boolean isAindaComTracinhos() {
         for (char c : this.texto) {
             if (c == '_') {
-                return true; // Se ainda houver um underline, retorna true
+                return true; //se ainda houver um underline, retorna true
             }
         }
-        return false; // Todos os tracinhos foram revelados
+        return false; //todos os tracinhos foram revelados
     }
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (char c : this.texto) {
-            sb.append(c).append(' '); // Adiciona um espaço entre os caracteres
+            sb.append(c).append(' '); //adiciona um espaço entre os caracteres
         }
-        return sb.toString().trim(); // Retorna a string formatada
+        return sb.toString().trim(); //retorna a string formatada
     }
 
     public boolean equals(Object obj) {
@@ -49,7 +49,7 @@ public class Tracinhos implements Cloneable {
         return java.util.Arrays.hashCode(this.texto);
     }
 
-    public Tracinhos(Tracinhos t) throws Exception { // Construtor de cópia
+    public Tracinhos(Tracinhos t) throws Exception { //construtor de cópia
         this.texto = new char[t.texto.length];
         System.arraycopy(t.texto, 0, this.texto, 0, t.texto.length);
     }
@@ -58,7 +58,7 @@ public class Tracinhos implements Cloneable {
         try {
             return new Tracinhos(this);
         } catch (Exception e) {
-            return null; // Não deve acontecer
+            return null; //nao deve acontecer
         }
     }
 }
