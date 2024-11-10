@@ -15,8 +15,11 @@ public class Tracinhos implements Cloneable {
         if (posicao < 0 || posicao >= this.texto.length) {
             throw new Exception("Posição inválida!");
         }
-        this.texto[posicao] = letra; // Armazena a letra na posição fornecida
-    }
+        // Armazena a letra na posição fornecida apenas se for um underline.
+        if (this.texto[posicao] == '_') {
+            this.texto[posicao] = letra; // Armazena a letra na posição fornecida
+        }
+    }    
 
     public boolean isAindaComTracinhos() {
         for (char c : this.texto) {

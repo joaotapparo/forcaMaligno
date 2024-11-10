@@ -70,11 +70,11 @@ public class TesteClasses {
   private static void testTracinhos() {
     System.out.println("Testando a classe Tracinhos:");
     try {
-        Tracinhos tracinhos = new Tracinhos(5);
+        Tracinhos tracinhos = new Tracinhos(4);
         System.out.println("Tracinhos iniciais: " + tracinhos);
         
         // Revela algumas letras
-        tracinhos.revele(2, 'A');
+        tracinhos.revele(2, 'V');
         System.out.println("Tracinhos após revelar 'A' na posição 2: " + tracinhos);
         
         // Revela mais letras
@@ -90,11 +90,8 @@ public class TesteClasses {
             return; // Sai do método se todos já foram revelados
         }
         
-        tracinhos.revele(3, 'V');
-        System.out.println("Tracinhos após revelar 'V' na posição 3: " + tracinhos);
-        
-        tracinhos.revele(4, 'A'); // Revela todas as letras
-        System.out.println("Tracinhos após revelar 'A' na posição 4: " + tracinhos);
+        tracinhos.revele(3, 'A');
+        System.out.println("Tracinhos após revelar 'A' na posição 3: " + tracinhos);
 
         // Verifica se todos os tracinhos foram revelados agora
         if (!tracinhos.isAindaComTracinhos()) {

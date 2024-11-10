@@ -1,19 +1,24 @@
 public class BancoDePalavras
 {
+    // private static String[] palavras = 
+    // {
+	// 	"JAVA",
+	// 	"CLASSE",
+	// 	"OBJETO",
+	// 	"INSTANCIA",
+	// 	"PUBLICO",
+	// 	"PRIVATIVO",
+	// 	"METODO",
+	// 	"CONSTRUTOR",
+	// 	"SETTER",
+	// 	"GETTER",
+	// 	"LUZ",
+	// 	"PRAZER"
+    // };
+
     private static String[] palavras = 
     {
-		"JAVA",
-		"CLASSE",
-		"OBJETO",
-		"INSTANCIA",
-		"PUBLICO",
-		"PRIVATIVO",
-		"METODO",
-		"CONSTRUTOR",
-		"SETTER",
-		"GETTER",
-		"LUZ",
-		"PRAZER"
+        "MALIGNO"
     };
 
     public static Palavra getPalavraSorteada ()
