@@ -13,14 +13,14 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
         if (isJaDigitada(letra)) {
             throw new Exception("A letra '" + letra + "' já foi digitada!");
         }
-        letrasJaDigitadas += letra; // Concatena a letra
+        letrasJaDigitadas += letra; //concatena a letra
     }
 
     public String toString() {
         if (letrasJaDigitadas.isEmpty()) {
             return "Nenhuma letra digitada.";
         }
-        return letrasJaDigitadas.replace("", ",").substring(1); // Formata a string com vírgulas
+        return letrasJaDigitadas.replace("", ",").substring(1); //formata a string com vírgulas
     }
 
     public boolean equals(Object obj) {
@@ -42,7 +42,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
         try {
             return new ControladorDeLetrasJaDigitadas(this);
         } catch (Exception e) {
-            return null; // Não deve acontecer
+            return null; //nao deve acontecer
         }
     }
 }

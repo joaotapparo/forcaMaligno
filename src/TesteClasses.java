@@ -1,15 +1,15 @@
 public class TesteClasses {
   public static void main(String[] args) {
-      // Testando a classe Palavra
+      //testando a classe Palavra
       testPalavra();
 
-      // Testando a classe ControladorDeErros
+      //testando a classe ControladorDeErros
       testControladorDeErros();
 
-      // Testando a classe ControladorDeLetrasJaDigitadas
+      //testando a classe ControladorDeLetrasJaDigitadas
       testControladorDeLetrasJaDigitadas();
 
-      // Testando a classe Tracinhos
+      //testando a classe Tracinhos
       testTracinhos();
   }
 
@@ -38,7 +38,7 @@ public class TesteClasses {
           controlador.registreUmErro();
           System.out.println("Máximo de erros atingido: " + controlador.isAtingidoMaximoDeErros());
           try {
-              controlador.registreUmErro(); // Deve lançar exceção
+              controlador.registreUmErro(); //deve lançar exceção
           } catch (Exception e) {
               System.err.println(e.getMessage());
           }
@@ -57,7 +57,7 @@ public class TesteClasses {
           System.out.println("Letras já digitadas: " + controlador);
           System.out.println("Letra 'A' já digitada? " + controlador.isJaDigitada('A'));
           try {
-              controlador.registre('A'); // Deve lançar exceção
+              controlador.registre('A'); //deve lançar exceção
           } catch (Exception e) {
               System.err.println(e.getMessage());
           }
@@ -73,27 +73,27 @@ public class TesteClasses {
         Tracinhos tracinhos = new Tracinhos(4);
         System.out.println("Tracinhos iniciais: " + tracinhos);
         
-        // Revela algumas letras
+        //revela algumas letras
         tracinhos.revele(2, 'V');
         System.out.println("Tracinhos após revelar 'A' na posição 2: " + tracinhos);
         
-        // Revela mais letras
+        //revela mais letras
         tracinhos.revele(0, 'J');
         System.out.println("Tracinhos após revelar 'J' na posição 0: " + tracinhos);
         
         tracinhos.revele(1, 'A');
         System.out.println("Tracinhos após revelar 'A' na posição 1: " + tracinhos);
         
-        // Verifica se ainda há tracinhos antes de revelar o último
+        //verifica se ainda há tracinhos antes de revelar o último
         if (!tracinhos.isAindaComTracinhos()) {
             System.out.println("Todos os tracinhos foram revelados!");
-            return; // Sai do método se todos já foram revelados
+            return; //sai do método se todos já foram revelados
         }
         
         tracinhos.revele(3, 'A');
         System.out.println("Tracinhos após revelar 'A' na posição 3: " + tracinhos);
 
-        // Verifica se todos os tracinhos foram revelados agora
+        //verifica se todos os tracinhos foram revelados agora
         if (!tracinhos.isAindaComTracinhos()) {
             System.out.println("Todos os tracinhos foram revelados!");
         } else {
