@@ -75,7 +75,7 @@ public class TesteClasses {
         
         //revela algumas letras
         tracinhos.revele(2, 'V');
-        System.out.println("Tracinhos após revelar 'A' na posição 2: " + tracinhos);
+        System.out.println("Tracinhos após revelar 'V' na posição 2: " + tracinhos);
         
         //revela mais letras
         tracinhos.revele(0, 'J');
